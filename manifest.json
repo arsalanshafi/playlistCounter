@@ -1,0 +1,26 @@
+{
+    "manifest_version":3,
+    "name":"playlist counter",
+    "description":"How much time it will take you to watch this playlist",
+    "version":"1",
+    "permissions":["storage","tabs","activeTab"],
+    "host_permissions":["https://*/*"],
+
+
+    "content_scripts":[
+        {
+            "matches":["https://*/*"],
+            "js":["content.js"]
+        }
+    ],
+
+    "action":{
+        "default_popup":"popup.html",
+		"default_icon":{
+			"16":"icon.jpg",
+			"24":"icon.jpg",
+			"32":"icon.jpg"
+			
+		}
+    }
+}
