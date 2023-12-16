@@ -1,4 +1,4 @@
-let min,sec,hour
+
 
 const calculate = () =>{
     hour = Math.trunc(min/60)
@@ -50,6 +50,7 @@ const getTags = () =>{
 
 chrome.runtime.onMessage.addListener((obj,sender,response)=>{
     if(obj.yt == "yes"){
+		let min,sec,hour
         console.log("message recieved")
         getTags()
         let flag = calculate()
